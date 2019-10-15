@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace GroupHW2_Try2.Controllers
+namespace GroupHW2_Try2.Controllers//testing comment
 {
     public class HomeController : Controller
     {
