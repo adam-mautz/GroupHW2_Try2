@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/myStyleSheet.css" rel="stylesheet" />
+
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a href="@Url.Action("AddOne", "Dictionary")">Add one time to Dictionary</a> </li>
+            <li><a href="@Url.Action("AddHuge", "Dictionary")">Add Huge List of Items to Dictionary</a></li>
+            <li><a href="@Url.Action("Display", "Dictionary")"> Display Dictionary </a></li>
+            <li><a href="@Url.Action("Delete", "Dictionary")">Delete from Dictionary</a></li>
+            <li><a href="@Url.Action("Clear", "Dictionary")">Clear Dictionary</a></li>
+            <li><a href="@Url.Action("Search", "Dictionary")">Search Dictionary</a></li>
+            <li><a href="@Url.Action("Index", "Home")">Return to Main Menu</a></li>
+        </ul>
+    </div>
+    @Html.Raw((String)ViewBag.Delete)
+    @Html.Raw((String)ViewBag.Search)
+</body>
+</html>

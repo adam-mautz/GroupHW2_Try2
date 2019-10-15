@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Display</title>
+    <link href="~/Content/myStyleSheet.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a href="@Url.Action("AddOne", "Queue")">Add one time to Queue</a> </li>
+            <li><a href="@Url.Action("AddHuge", "Queue")">Add Huge List of Items to Queue</a></li>
+            <li><a href="@Url.Action("Display", "Queue")"> Display Queue </a></li>
+            <li><a href="@Url.Action("Delete", "Queue")">Delete from Queue</a></li>
+            <li><a href="@Url.Action("Clear", "Queue")">Clear Queue</a></li>
+            <li><a href="@Url.Action("Search", "Queue")">Search Queue</a></li>
+            <li><a href="@Url.Action("Index", "Home")">Return to Main Menu</a></li>
+        </ul>
+    </div>
+    <div>
+        @if (ViewBag.MyQueue.Count > 0)
+        {
+            foreach (var sData in ViewBag.MyQueue)
+            {
+                <p>@sData</p>
+            }
+        }
+        else
+        {
+                <p> There are no items in the Queue to display</p>
+        }
+    </div>
+</body>
+</html>

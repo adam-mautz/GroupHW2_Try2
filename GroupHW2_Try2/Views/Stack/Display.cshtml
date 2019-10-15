@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>StackView</title>
+    <link href="~/Content/myStyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="subList">
+        <ul>
+            <li><a href="@Url.Action("AddOne", "Stack")">Add one time to stack</a> </li>
+            <li><a href="@Url.Action("AddHuge", "Stack")">Add Huge List of Items to Stack</a></li>
+            <li><a href="@Url.Action("Display", "Stack")"> Display Stack </a></li>
+            <li><a href="@Url.Action("Delete", "Stack")">Delete from Stack</a></li>
+            <li><a href="@Url.Action("Clear", "Stack")">Clear Stack</a></li>
+            <li><a href="@Url.Action("Search", "Stack")">Search Stack</a></li>
+            <li><a href="@Url.Action("Search", "Stack")">Return to Main Menu</a></li>
+        </ul>
+    </div>
+    <div>
+        @if (ViewBag.MyStack.Count > 0)
+        {
+            foreach (var sData in ViewBag.MyStack)
+            {
+                <p>@sData</p>
+            }
+        }
+        else
+        {
+            <p> There are no items in the Stack to display</p>
+        }
+    </div>
+</body>
+</html>
+</body>
+</html>

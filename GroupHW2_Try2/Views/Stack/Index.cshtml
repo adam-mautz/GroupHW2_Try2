@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/myStyleSheet.css" rel="stylesheet" />
+
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a href="@Url.Action("AddOne", "Stack")">Add one time to stack</a> </li>
+            <li><a href="@Url.Action("AddHuge", "Stack")">Add Huge List of Items to Stack</a></li>
+            <li><a href="@Url.Action("Display", "Stack")"> Display Stack </a></li>
+            <li><a href="@Url.Action("Delete", "Stack")">Delete from Stack</a></li>
+            <li><a href="@Url.Action("Clear", "Stack")">Clear Stack</a></li>
+            <li><a href="@Url.Action("Search", "Stack")">Search Stack</a></li>
+            <li><a href="@Url.Action("Index", "Home")">Return to Main Menu</a></li>
+        </ul>
+
+    </div>
+    @Html.Raw((String)ViewBag.Delete)
+    @Html.Raw((String)ViewBag.Search)
+
+
+</body>
+</html>
