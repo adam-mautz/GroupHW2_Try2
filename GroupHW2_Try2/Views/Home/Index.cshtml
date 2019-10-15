@@ -1,4 +1,4 @@
-﻿
+﻿<!--Razor to change to HTML-->
 @{
     Layout = null;
 }
@@ -14,7 +14,8 @@
 <body>
     <div>
         <ul>
-            <li> <a href="@Url.Action("Index", "Stack")">Stack</a> </li>
+            <!--Displays the controllers in the view web page-->
+            <li><a href="@Url.Action("Index", "Stack")">Stack</a> </li>
             <li><a href="@Url.Action("Index", "Queue")">Queue</a></li>
             <li><a href="@Url.Action("Index", "Dictionary")">Dictionary</a></li>
             <li><a href="@Url.Action("Exit", "Home")">Exit</a></li>

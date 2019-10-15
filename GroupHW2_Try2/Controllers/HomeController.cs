@@ -11,11 +11,13 @@ namespace GroupHW2_Try2.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            //Show home page
             return View();
         }
 
         public ActionResult Exit()
         {
+            //Take to BYU home page
             return Redirect("https://www.byu.edu");
         }
     }
