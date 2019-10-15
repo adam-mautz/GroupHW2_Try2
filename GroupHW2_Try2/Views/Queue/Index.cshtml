@@ -15,16 +15,16 @@
 <body>
     <div>
         <ul>
-            <li><a href="@Url.Action("AddOne", "Queue")">Add one time to Queue</a> </li>
-            <li><a href="@Url.Action("AddHuge", "Queue")">Add Huge List of Items to Queue</a></li>
-            <li><a href="@Url.Action("Display", "Queue")"> Display Queue </a></li>
-            <li><a href="@Url.Action("Delete", "Queue")">Delete from Queue</a></li>
-            <li><a href="@Url.Action("Clear", "Queue")">Clear Queue</a></li>
-            <li><a href="@Url.Action("Search", "Queue")">Search Queue</a></li>
-            <li><a href="@Url.Action("Index", "Home")">Return to Main Menu</a></li>
+            <li><a href="@Url.Action("AddOne", "Queue")">Add one time to Queue</a> </li><!--makes a link to the AddOne function in the Queue Controller-->
+            <li><a href="@Url.Action("AddHuge", "Queue")">Add Huge List of Items to Queue</a></li><!--makes a link to the AddOne function in the Queue Controller-->
+            <li><a href="@Url.Action("Display", "Queue")"> Display Queue </a></li><!--makes a link to the AddOne function in the Queue Controller-->
+            <li><a href="@Url.Action("Delete", "Queue")">Delete from Queue</a></li><!--makes a link to the AddOne function in the Queue Controller-->
+            <li><a href="@Url.Action("Clear", "Queue")">Clear Queue</a></li><!--makes a link to the AddOne function in the Queue Controller-->
+            <li><a href="@Url.Action("Search", "Queue")">Search Queue</a></li><!--makes a link to the AddOne function in the Queue Controller-->
+            <li><a href="@Url.Action("Index", "Home")">Return to Main Menu</a></li><!--links back to Home Controller index function that launches the View-->
         </ul>
     </div>
-    @Html.Raw((String)ViewBag.Delete)
-    @Html.Raw((String)ViewBag.Search)
+    @Html.Raw((String)ViewBag.Delete)<!--Shows message on Delete-->
+    @Html.Raw((String)ViewBag.Search)<!--Shows message on Search-->
 </body>
 </html>
