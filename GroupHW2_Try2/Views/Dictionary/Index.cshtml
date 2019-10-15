@@ -1,4 +1,4 @@
-﻿
+﻿<!--Reset html on the page-->
 @{
     Layout = null;
 }
@@ -15,6 +15,7 @@
 <body>
     <div>
         <ul>
+            <!--Create links to each method in the dictionary controller-->
             <li><a href="@Url.Action("AddOne", "Dictionary")">Add one time to Dictionary</a> </li>
             <li><a href="@Url.Action("AddHuge", "Dictionary")">Add Huge List of Items to Dictionary</a></li>
             <li><a href="@Url.Action("Display", "Dictionary")"> Display Dictionary </a></li>
@@ -24,6 +25,8 @@
             <li><a href="@Url.Action("Index", "Home")">Return to Main Menu</a></li>
         </ul>
     </div>
+
+    <!--Reads Delete and Search ViewBags as HTML-->
     @Html.Raw((String)ViewBag.Delete)
     @Html.Raw((String)ViewBag.Search)
 </body>

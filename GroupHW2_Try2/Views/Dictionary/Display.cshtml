@@ -1,4 +1,4 @@
-﻿
+﻿<!--Reset html on the page-->
 @{
     Layout = null;
 }
@@ -15,6 +15,7 @@
 <body>
     <div class="subList">
         <ul>
+            <!--Create links to each method in the dictionary controller-->
             <li><a href="@Url.Action("AddOne", "Dictionary")">Add one time to Dictionary</a> </li>
             <li><a href="@Url.Action("AddHuge", "Dictionary")">Add Huge List of Items to Dictionary</a></li>
             <li><a href="@Url.Action("Display", "Dictionary")"> Display Dictionary </a></li>
@@ -25,6 +26,7 @@
         </ul>
     </div>
     <div>
+        <!--Prints dictionary as HTML-->
         @if (ViewBag.MyDictionary.Count > 0)
         {
             foreach (var sData in ViewBag.MyDictionary)
@@ -34,7 +36,7 @@
         }
         else
         {
-                <p> There are no items in the Dictionary to display</p>
+            <p> There are no items in the Dictionary to display</p>
         }
     </div>
 </body>
