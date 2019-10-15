@@ -15,18 +15,18 @@
 <body>
     <div>
         <ul>
-            <li><a href="@Url.Action("AddOne", "Stack")">Add one time to stack</a> </li>
-            <li><a href="@Url.Action("AddHuge", "Stack")">Add Huge List of Items to Stack</a></li>
-            <li><a href="@Url.Action("Display", "Stack")"> Display Stack </a></li>
-            <li><a href="@Url.Action("Delete", "Stack")">Delete from Stack</a></li>
-            <li><a href="@Url.Action("Clear", "Stack")">Clear Stack</a></li>
-            <li><a href="@Url.Action("Search", "Stack")">Search Stack</a></li>
-            <li><a href="@Url.Action("Index", "Home")">Return to Main Menu</a></li>
+            <li><a href="@Url.Action("AddOne", "Stack")">Add one time to stack</a> </li><!--makes a link to the AddOne function in the Stack Controller-->
+            <li><a href="@Url.Action("AddHuge", "Stack")">Add Huge List of Items to Stack</a></li><!--makes a link to the AddHuge function in the Stack Controller-->
+            <li><a href="@Url.Action("Display", "Stack")"> Display Stack </a></li><!--makes a link to the Display function in the Stack Controller-->
+            <li><a href="@Url.Action("Delete", "Stack")">Delete from Stack</a></li><!--makes a link to the Delete function in the Stack Controller-->
+            <li><a href="@Url.Action("Clear", "Stack")">Clear Stack</a></li><!--makes a link to the Clear function in the Stack Controller-->
+            <li><a href="@Url.Action("Search", "Stack")">Search Stack</a></li><!--makes a link to the Search function in the Stack Controller-->
+            <li><a href="@Url.Action("Index", "Home")">Return to Main Menu</a></li><!--links back to Home Controller index function that launches the View-->
         </ul>
 
     </div>
-    @Html.Raw((String)ViewBag.Delete)
-    @Html.Raw((String)ViewBag.Search)
+    @Html.Raw((String)ViewBag.Delete)<!--Shows message on Delete-->
+    @Html.Raw((String)ViewBag.Search)<!--Shows message on Search-->
 
 
 </body>
